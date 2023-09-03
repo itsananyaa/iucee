@@ -8,7 +8,7 @@
 * After that you can just delete Install-modules.bat when the CMD window closes.
 * Edit the config.js file.
 * Ensure that you have put your TOKEN, CHANNEL ID, and BOT NAME in the file.
-* Get your API KEY for the chatbot from here
+* Get your API KEY for the chatbot 
 * Run the run.bat file.
  and that's it!
 

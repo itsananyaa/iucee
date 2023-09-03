@@ -2,6 +2,8 @@
 
  *  It is a chatbot made for servers in Discord.
 
+**Make sure to download [NODE.JS](https://www.nodejs.org/en) before**
+
 # How to use
 * Just download this repository as zip
 * Run Install-modules.bat to install the necessary modules for the project. This should create a folder called Node Modules.

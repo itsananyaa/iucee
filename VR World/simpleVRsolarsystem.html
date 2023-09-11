@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VR Solar System</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Space background -->
+        <a-sky color="black"></a-sky>
+        
+        <!-- Sun -->
+        <a-sphere id="sun" position="0 0 -10" radius="1" color="yellow" emissive="#f9c823" material="emissiveIntensity: 0.5;"></a-sphere>
+        
+        <!-- Circular lines around the Sun (white color) -->
+        <a-circle position="0 0 -10" radius="2" color="white" rotation="90 0 0"></a-circle>
+        <a-circle position="0 0 -10" radius="4" color="white" rotation="90 0 0"></a-circle>
+        <a-circle position="0 0 -10" radius="6" color="white" rotation="90 0 0"></a-circle>
+        
+        <!-- Planets -->
+        <a-sphere id="planet1" position="3 0 -10" radius="0.2" color="orange"></a-sphere>
+        <a-sphere id="planet2" position="5 0 -10" radius="0.2" color="lightgray"></a-sphere>
+        <a-sphere id="planet3" position="7 0 -10" radius="0.2" color="lightblue"></a-sphere>
+        <a-sphere id="planet4" position="9 0 -10" radius="0.2" color="lightgreen"></a-sphere>
+        <a-sphere id="planet5" position="11 0 -10" radius="0.2" color="lightpink"></a-sphere>
+        <a-sphere id="planet6" position="13 0 -10" radius="0.2" color="lightyellow"></a-sphere>
+        <a-sphere id="planet7" position="15 0 -10" radius="0.2" color="lightcyan"></a-sphere>
+        <a-sphere id="planet8" position="17 0 -10" radius="0.2" color="lightcoral"></a-sphere>
+        
+        <!-- Camera -->
+        <a-camera position="0 1.6 0">
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+
+    <script>
+        // Get references to the sun and planets
+        const sun = document.querySelector("#sun");
+        const planets = [
+            document.querySelector("#planet1"),
+            document.querySelector("#planet2"),
+            document.querySelector("#planet3"),
+            document.querySelector("#planet4"),
+            document.querySelector("#planet5"),
+            document.querySelector("#planet6"),
+            document.querySelector("#planet7"),
+            document.querySelector("#planet8")
+        ];
+
+        // Define the rotation animation properties
+        const rotationDuration = 5000; // Duration of one rotation in milliseconds
+        const rotationEasing = "linear"; // Easing type
+
+        // Apply rotation animations to the sun and all planets
+        sun.setAttribute("animation", `property: rotation; to: 0 360 0; loop: true; dur: ${rotationDuration}; easing: ${rotationEasing}`);
+
+        planets.forEach((planet, index) => {
+            planet.setAttribute("animation", `property: rotation; to: 0 360 0; loop: true; dur: ${rotationDuration}; easing: ${rotationEasing}`);
+        });
+    </script>
+</body>
+</html>
+

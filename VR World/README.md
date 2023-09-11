@@ -1,4 +1,4 @@
-* * VR Solar System * *
+## VR Solar System
 
 Explore a virtual reality (VR) solar system with this **A-Frame** project. Experience a 3D solar system representation with a central sun, orbiting planets, and a starry background.
 
